@@ -1,0 +1,22 @@
+{
+  "name": "dc-bookshelf-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint ./src --fix",
+    "test": "newman run \"postman/Bookshelf API Test.postman_collection.json\" -e \"postman/Bookshelf API Test.postman_environment.json\" --working-dir postman -r json,cli --reporter-json-export postman/postman-report-$(date +%s).json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shopify/eslint-plugin": "^44.0.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "newman": "^6.1.2"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "nanoid": "^3.3.7"
+  }
+}
